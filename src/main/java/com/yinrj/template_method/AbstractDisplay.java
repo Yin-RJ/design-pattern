@@ -12,7 +12,10 @@ public abstract class AbstractDisplay {
 
     protected abstract void print();
 
-    public void display() {
+    /**
+     * final是因为禁止子类重写该方法
+     */
+    public final void display() {
         open();
         for (int i = 0; i < 5; ++i) {
             print();
